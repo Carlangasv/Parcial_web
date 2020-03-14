@@ -1,41 +1,27 @@
 <template>
   <div class="container">
     <div>
-      <logo />
-      <h1 class="title">
-        Parcial_TemaB
-      </h1>
-      <h2 class="subtitle">
-        Tema B implementado con framework vue
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+      <h1 class="title">Bienvenido al sistema de administracion</h1>
+      <div>
+        <b-card title="Sistema de administración" sub-title="Seleccione una opción">
+          <b-button block href="Registro" variant="primary">Agregar vehiculo</b-button>
+          <br />
+          <b-button block href="#" variant="primary">Modificar vehiculo</b-button>
+          <br />
+          <b-button block href="#" variant="primary">Eliminar vehiculo</b-button>
+          <br />
+          <b-button block href="#" variant="primary">Ver vehiculos</b-button>
+          <br />
+        </b-card>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
-  }
-}
+  
+};
 </script>
 
 <style>
@@ -46,15 +32,16 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  font-size: 50px;
   color: #35495e;
+  text-align: start;
   letter-spacing: 1px;
 }
 
