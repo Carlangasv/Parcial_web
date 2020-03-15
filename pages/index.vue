@@ -4,11 +4,7 @@
       <h1 class="title">Bienvenido al sistema de administracion</h1>
       <div>
         <b-card title="Sistema de administración" sub-title="Seleccione una opción">
-          <b-button block href="Registro" variant="primary">Agregar vehiculo</b-button>
-          <br />
-          <b-button block href="#" variant="primary">Modificar vehiculo</b-button>
-          <br />
-          <b-button block href="#" variant="primary">Eliminar vehiculo</b-button>
+          <b-button block href="Registro" variant="primary">Administrar vehiculos</b-button>
           <br />
           <b-button block href="#" variant="primary">Ver vehiculos</b-button>
           <br />
