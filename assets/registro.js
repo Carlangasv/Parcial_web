@@ -7,19 +7,30 @@ export default {
       max: maxDate,
       inEdition: false,
       vehiculo: {
+        tipo: "Moto",
         placa: "KDE75C",
         color: "Negra",
         marca: "Akt",
         ciudad: "Medellin",
-        fechaEntrada: "12/12/2019",
-        hora: "11:30",
-        tipo: null,
+        fechaEntrada: "2019-12-12",
+        hora: "11:30:00",
         acciones: true
       }, lista_vehiculos: [
         {
+          tipo: "Moto",
           placa: "KDE75C",
           color: "Negra",
           marca: "Akt",
+          ciudad: "Medellin",
+          fechaEntrada: "2019-12-12",
+          hora: "11:30:00",
+          acciones: true
+        }
+      ], lista: [
+        {
+          tipo: "Moto",
+          placa: "KDE75C",
+          color: "Negra",
           acciones: true
         }
       ],
@@ -31,8 +42,18 @@ export default {
         "Camion"
       ],
     };
-  },
-  methods: {
+  }, mounted() {
+    this.vehiculo = {
+      tipo: null,
+      placa: "",
+      color: "",
+      marca: "",
+      ciudad: "",
+      fechaEntrada: "",
+      hora: "",
+      acciones: true
+    }
+  }, methods: {
     onSubmit() {
       if (this.vehiculo.fechaEntrada == "") {
         alert("Seleccione una fecha valida")
@@ -43,14 +64,15 @@ export default {
       } else {
         alert("Vehiculo agregado")
         this.lista_vehiculos.push(this.vehiculo);
+        this.lista.push(this.vehiculo);
         this.vehiculo = {
+          tipo: null,
           placa: "",
           color: "",
           marca: "",
           ciudad: "",
           fechaEntrada: "",
           hora: "",
-          tipo: null,
           acciones: true
         }
         this.saveLocalStorage(),
@@ -67,10 +89,14 @@ export default {
     },
     saveLocalStorage() {
       localStorage.setItem("vehiculo", JSON.stringify(this.lista_vehiculos));
+      localStorage.setItem("vehiculoM", JSON.stringify(this.lista))
     },
     getLocalStorage() {
       if (localStorage.getItem("vehiculo")) {
         this.lista_vehiculos = JSON.parse(localStorage.getItem("vehiculo"));
+      }
+      if (localStorage.getItem("vehiculoM")) {
+        this.lista = JSON.parse(localStorage.getItem("vehiculoM"));
       }
     }, loadUser({ item }) {
       let user = this.lista_vehiculos.find(vehiculo => vehiculo.placa == item.placa);
@@ -98,7 +124,7 @@ export default {
         acciones: true
       };
       this.saveLocalStorage();
-      this.inEdition=false;
+      this.inEdition = false;
     }
   }
 };

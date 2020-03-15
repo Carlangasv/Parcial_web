@@ -57,7 +57,7 @@
           <b-button type="submit" variant="primary" v-if="!inEdition">Agregar vehiculo</b-button>
           <b-button @click="updateUser()" block variant="danger" v-else>Actualizar vehiculo</b-button>
         </b-form>
-        <b-table striped hover :items="lista_vehiculos">
+        <b-table striped hover :items="lista">
           <template v-slot:cell(acciones)="row">
             <b-button size="sm" @click="loadUser(row)" class="mr-2">Modificar</b-button>
             <b-button size="sm" @click="deleteUser(row)" class="mr-2">Eliminar</b-button>

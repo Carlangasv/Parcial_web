@@ -6,7 +6,7 @@
         <b-card title="Sistema de administración" sub-title="Seleccione una opción">
           <b-button block href="Registro" variant="primary">Administrar vehiculos</b-button>
           <br />
-          <b-button block href="#" variant="primary">Ver vehiculos</b-button>
+          <b-button block href="listar" variant="primary" v-if="!localExist">Ver vehiculos</b-button>
           <br />
         </b-card>
       </div>
@@ -16,7 +16,15 @@
 
 <script>
 export default {
-  
+  data(){
+    return{
+      localExist: false
+    }
+  },mounted(){
+    if (localStorage == undefined){
+        this.localExist = true
+    }
+  }
 };
 </script>
 
