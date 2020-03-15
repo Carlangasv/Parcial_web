@@ -40,19 +40,19 @@ export default {
             switch (item.tipo) {
                 case 'Moto':
                     var deuda = 4000 * (tiempo);
-                    alert("la deuda es de "+deuda)
+                    alert("Tardo "+tiempo+" horas y la deuda es de "+deuda)
                     break;
                 case 'Carro':
                     var deuda = 8000 * (tiempo);
-                    alert("la deuda es de "+ deuda)
+                    alert("Tardo "+tiempo+" horas y la deuda es de "+deuda)
                     break;
                 case 'Camion':
                     var deuda = 21000 * (tiempo);
-                    alert("la deuda es de "+deuda)
+                    alert("Tardo "+tiempo+" horas y la deuda es de "+deuda)
                     break;
                 case 'Bicicleta':
                     var deuda = 2000 * (tiempo);
-                    alert("la deuda es de "+deuda)
+                    alert("Tardo "+tiempo+" horas y la deuda es de "+deuda)
                     break;
             }
 
