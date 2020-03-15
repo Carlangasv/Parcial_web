@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fondo">
     <div class="container">
       <b-card title="Ingrese los datos">
         <b-form @submit="onSubmit()" action="javascript:void(0)" >
@@ -73,5 +73,8 @@
 <style>
 .container {
   margin: 30px;
+}
+.fondo{
+  background-image: url("../images/Back2.jpg");
 }
 </style>

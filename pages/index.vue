@@ -2,16 +2,12 @@
   <div class="container">
     <div>
       <h1 class="title">Bienvenido al sistema de administracion</h1>
-      <div>
-        <b-card title="Sistema de administración" sub-title="Seleccione una opción">
-          <b-button block href="Registro" variant="primary">Administrar vehiculos</b-button>
+          <b-button block href="Registro" variant="primary" class="btn">Administrar vehiculos</b-button>
           <br />
-          <b-button block href="listar" variant="primary" v-if="!localExist">Ver vehiculos</b-button>
+          <b-button block href="listar" variant="primary" class="btn" v-if="!localExist">Ver vehiculos</b-button>
           <br />
-        </b-card>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -37,6 +33,7 @@ export default {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  background-image: url("../images/Back.jpg");
 }
 
 .title {
@@ -44,7 +41,7 @@ export default {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-size: 50px;
-  color: #35495e;
+  color: white;
   text-align: start;
   letter-spacing: 1px;
 }
@@ -60,4 +57,9 @@ export default {
 .links {
   padding-top: 15px;
 }
+.btn{
+  color:black;
+  
+}
+
 </style>
